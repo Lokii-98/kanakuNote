@@ -1,0 +1,18 @@
+{
+  "_id": "",
+  "userId": "Magesh4321",
+  "name": "Magesh",
+  "mailid": "mageshKoutlook@gmail.com",
+  "phonenumber": "+91 987654321",
+  "photo": "",
+  "dob": "15-10-1998",
+  "address": "Duabi, Dubai Main Road, Dubai Kuruku Santhu",
+  "placesVistied": [
+    {
+      "_id": "",
+      "placeId": "Coorg01",
+      "placeName": "Coorg",
+      "visitedOn": "24-01-2021"
+    }
+  ]
+}

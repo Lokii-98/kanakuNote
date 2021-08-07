@@ -1,0 +1,20 @@
+{
+  "_id": "",
+  "placeName": "",
+  "dateVisited": "",
+  "createdAt": "",
+  "travlledBy": "",
+  "occasion": "",
+  "people": [
+    {
+      "_id": "",
+      "name": ""
+    },
+    {
+      "_id": "",
+      "name": ""
+    }
+  ],
+  "driveLink": "",
+  "isFavourite": true
+}

@@ -1,0 +1,31 @@
+.navHeader {
+  font-size: 20px;
+  color: whitesmoke;
+  background-color: darkslategray;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navLogo {
+  padding: 10px;
+  margin: 10px;
+}
+
+.navLogo:hover {
+  color: burlywood;
+  cursor: pointer;
+}
+.navLI:hover {
+  color: burlywood;
+  cursor: pointer;
+}
+
+.navUL {
+  display: flex;
+  width: 35%;
+  justify-content: space-between;
+  padding: 0px 30px;
+  margin: 20px 17px;
+  list-style: none;
+}

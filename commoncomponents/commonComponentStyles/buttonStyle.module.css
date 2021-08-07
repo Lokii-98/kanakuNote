@@ -1,0 +1,10 @@
+.btnContainer {
+  margin: 3px;
+  color: antiquewhite;
+  background-color: rgb(231, 103, 53);
+  border-radius: 7px;
+  font-weight: bold;
+  padding: 6px;
+  border: none;
+  cursor: pointer;
+}

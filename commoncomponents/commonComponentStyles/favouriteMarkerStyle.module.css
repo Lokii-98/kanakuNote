@@ -1,0 +1,11 @@
+.favouriteMarked {
+  color: black;
+  width: 25px;
+  height: 30px;
+  margin: 0px 30px;
+  cursor: pointer;
+}
+
+.favouriteNotMarked {
+  color: gray;
+}
