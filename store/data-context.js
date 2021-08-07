@@ -17,6 +17,7 @@ export function DataContextProvider(props) {
     kanakuNoteData: kanakuNoteData,
     dispacthKanakuNoteData: dispacthKanakuNoteDataHanlder,
   };
+
   return (
     <DataContext.Provider value={context}>
       {props.children}
