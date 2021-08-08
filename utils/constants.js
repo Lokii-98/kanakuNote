@@ -23,6 +23,13 @@ const CONSTANTS = {
   USER_TRIP_EXPENSE: "TripExpenses",
   EXPENSE_TYPE_CREDIT: "Credit",
   EXPENSE_TYPE_DEBIT: "Debit",
+  DELETE_BTN: "Delete",
+  EDIT_BTN: "Edit",
+  ADD_NEW_USER_BTN: "Add New User",
+  ADD_NEW_EXPENSE_BTN: "Add New Expense",
+  UPDATE_USER_DETAILS: "Update User Data",
+  DELETE_USER_DATA: "Delete Data of ",
+  CANCEL_BTN: "Cancel",
 };
 
 export default CONSTANTS;

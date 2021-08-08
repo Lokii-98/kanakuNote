@@ -1,11 +1,14 @@
 import Layout from "../commoncomponents/layout";
+import { ButtonContextProvider } from "../store/button-context";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <ButtonContextProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ButtonContextProvider>
   );
 }
 

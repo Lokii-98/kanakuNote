@@ -1,4 +1,6 @@
+import CONSTANTS from "../../utils/constants";
 import Button from "../button";
+import TableStyles from "../commonComponentStyles/expenseTableStyle.module.css";
 
 export default function TableBody(props) {
   let { bodyData } = props;
@@ -10,9 +12,9 @@ export default function TableBody(props) {
           <td>{data.date}</td>
           <td>{data.reason}</td>
           <td>{data.paymentOption}</td>
-          <td>
-            <Button btnName={"Edit"} btnLink={"/"} />
-            <Button btnName={"Delete"} btnLink={"/"} />
+          <td className={TableStyles.btnContainer}>
+            <Button btnName={CONSTANTS.EDIT_BTN} />
+            <Button btnName={CONSTANTS.DELETE_BTN} />
           </td>
         </tr>
       ))}

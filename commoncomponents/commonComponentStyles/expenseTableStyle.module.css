@@ -3,7 +3,6 @@
 }
 
 .mainContainer {
-  width: 100vw;
   justify-content: space-evenly;
   display: flex;
   margin: 10px;
@@ -19,7 +18,7 @@
   padding: 5px;
 }
 
-.headerLabelName {
+.headerName {
   margin: 10px 0px;
   font-size: 26px;
   letter-spacing: 0.3rem;
@@ -29,15 +28,20 @@
   text-shadow: 5px 6px 8px #adadad;
 }
 
-.headerLabel {
-  margin-top: 15px;
-  font-size: 20px;
-  font-weight: 800;
+.headerContainer {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px 0px;
+  font-size: 22px;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
 }
 
 .label {
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .labelName {
@@ -49,4 +53,8 @@
 
 .addButton {
   text-align: right;
+}
+
+.btnContainer {
+  display: flex;
 }
