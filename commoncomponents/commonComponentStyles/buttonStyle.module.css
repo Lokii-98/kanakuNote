@@ -8,3 +8,37 @@
   border: none;
   cursor: pointer;
 }
+
+.btnDelete {
+  margin: 3px;
+  color: white;
+  background-color: rgb(202, 0, 0);
+  border-radius: 7px;
+  font-weight: bold;
+  padding: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btnEdit {
+  margin: 3px;
+  color: white;
+  background-color: rgb(24, 8, 172);
+  border-radius: 7px;
+  font-weight: bold;
+  padding: 6px;
+  border: none;
+  cursor: pointer;
+}
+.btnAdd {
+  margin: 3px;
+  color: white;
+  background-color: rgb(55, 155, 72);
+  border-radius: 7px;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 6px;
+  border: none;
+  cursor: pointer;
+  width: 70px;
+}

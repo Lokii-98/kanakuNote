@@ -1,0 +1,52 @@
+.expenseTableContainer {
+  margin: 10px;
+}
+
+.mainContainer {
+  width: 100vw;
+  justify-content: space-evenly;
+  display: flex;
+  margin: 10px;
+}
+
+.innerContainer {
+  margin: 10px;
+}
+
+.mainHeaders {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.headerLabelName {
+  margin: 10px 0px;
+  font-size: 26px;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-align: center;
+  text-shadow: 5px 6px 8px #adadad;
+}
+
+.headerLabel {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.label {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.labelName {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.addButton {
+  text-align: right;
+}
