@@ -15,3 +15,11 @@ export const getExpenseData = (expenseData, expenseType) => {
     return debitArray;
   }
 };
+
+export const getTotalAmount = (amountArray) => {
+  let totalAmount = 0;
+  amountArray.map((amountObj) => {
+    totalAmount = totalAmount + parseInt(amountObj.amount);
+  });
+  return totalAmount;
+};

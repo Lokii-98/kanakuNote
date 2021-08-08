@@ -37,8 +37,19 @@
   border-radius: 7px;
   font-weight: 400;
   font-size: 16px;
-  padding: 6px;
+  padding: 10px;
   border: none;
   cursor: pointer;
-  width: 70px;
+}
+
+.btnCancel {
+  margin: 3px;
+  color: white;
+  background-color: rgb(192, 13, 37);
+  border-radius: 7px;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
 }
