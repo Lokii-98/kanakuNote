@@ -21,6 +21,8 @@ const CONSTANTS = {
   HOME_PAGE: "Home_Page",
   INDIVIDUAL_USER_PAGE: "EachUserPage",
   USER_TRIP_EXPENSE: "TripExpenses",
+  EXPENSE_TYPE_CREDIT: "Credit",
+  EXPENSE_TYPE_DEBIT: "Debit",
 };
 
 export default CONSTANTS;

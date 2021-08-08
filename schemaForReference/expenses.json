@@ -3,20 +3,20 @@
   "placeName": "Coorg",
   "placeId": "Coorg01",
   "personName": "Magesh",
-  "visitedOn": "",
+  "visitedOn": "24-04-2021",
   "amountCredited": [
     {
-      "creditamount": "",
-      "creditDate": "",
-      "creditReason": "",
+      "creditamount": "500",
+      "creditDate": "24-04-2021",
+      "creditReason": "Food",
       "paymentOption": "Cash"
     }
   ],
   "debitAmount": [
     {
-      "debitAmount": "",
-      "debitDate": "",
-      "debitReason": "",
+      "debitAmount": "480",
+      "debitDate": "24-04-2021",
+      "debitReason": "Food",
       "paymentOption": "Cash"
     }
   ],

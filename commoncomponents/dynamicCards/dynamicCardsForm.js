@@ -26,7 +26,7 @@ export default function DynamicForm(props) {
     );
   } else if (props.pageName === CONSTANTS.USER_TRIP_EXPENSE) {
     buttonName = `Open ${props.dataObj.userName} Expenses`;
-    link = `../usersData/${props.dataObj.userName}/${props.dataObj.placeId}`;
+    link = `../usersData/personDetails/${props.dataObj.userName}/${props.dataObj.placeId}`;
     console.log("Trip Expense is true", buttonName, link);
     return (
       <UserTripData
