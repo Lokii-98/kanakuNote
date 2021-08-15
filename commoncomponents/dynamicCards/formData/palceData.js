@@ -28,11 +28,20 @@ export default function PlaceData(props) {
       </div>
       <div className={DynamicFormStyles.dcFlex}>
         <label className={DynamicFormStyles.dcTitle}>
-          {CONSTANTS.VISITED_ON}:
+          {CONSTANTS.TRIP_STARTED}:
         </label>
         <div className={DynamicFormStyles.dcContent}>
           {" "}
-          {props.dataObj.dateVisited}
+          {props.dataObj.tripStarted}
+        </div>
+      </div>
+      <div className={DynamicFormStyles.dcFlex}>
+        <label className={DynamicFormStyles.dcTitle}>
+          {CONSTANTS.TRIP_ENDED}:
+        </label>
+        <div className={DynamicFormStyles.dcContent}>
+          {" "}
+          {props.dataObj.tripEnded}
         </div>
       </div>
       <div className={DynamicFormStyles.dcFlex}>
@@ -45,6 +54,7 @@ export default function PlaceData(props) {
         </div>
       </div>
       <div className={DynamicFormStyles.dcButton}>
+        <Button btnName={CONSTANTS.EDIT_BTN} id={props.dataObj.placeId} />
         <Button btnName={props.buttonName} btnLink={props.btnLink} />
       </div>
     </li>

@@ -55,6 +55,13 @@
   text-align: right;
 }
 
+.addNewPlaceBtn {
+  text-align: right;
+  bottom: 30px;
+  position: fixed;
+  right: 30px;
+}
+
 .btnContainer {
   display: flex;
 }

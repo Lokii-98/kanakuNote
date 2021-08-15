@@ -50,7 +50,8 @@ export const checkIfUserVisitedThisPlace = (dataObj, placeId, placeName) => {
       userObj.placeName = placeObj.placeName;
       userObj.userName = dataObj.name;
       userObj.userId = dataObj.userId;
-      userObj.dateVisited = placeObj.visitedOn;
+      userObj.tripStarted = placeObj.tripStarted;
+      userObj.tripEnded = placeObj.tripEnded;
       console.log("User Object", userObj);
       userArray.push(userObj);
     }

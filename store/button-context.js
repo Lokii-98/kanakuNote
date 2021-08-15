@@ -1,21 +1,21 @@
 import { createContext, useState } from "react";
 
 const ButtonContext = createContext({
-  isAddExpenseModel: null,
-  dispatchAddExpense: function (setData) {},
+  btnEventData: null,
+  dispatchButtonEventData: function () {},
 });
 
 export function ButtonContextProvider(props) {
-  const [isAddExpenseModel, setIsAddExpenseModel] = useState();
+  const [btnEventData, setIsBtnEventData] = useState();
 
-  function dispatchAddExpenseHandler(setData) {
-    setIsAddExpenseModel(setData);
-    console.log(setData, "use context");
+  function dispatchButtonEventDataHandler(editData) {
+    setIsBtnEventData(editData);
+    console.log(editData, "use context");
   }
 
   const context = {
-    isAddExpenseModel: isAddExpenseModel,
-    dispatchAddExpense: dispatchAddExpenseHandler,
+    btnEventData: btnEventData,
+    dispatchButtonEventData: dispatchButtonEventDataHandler,
   };
 
   return (

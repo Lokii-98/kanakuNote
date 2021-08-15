@@ -30,15 +30,24 @@ export default function UserTripData(props) {
       </div>
       <div className={DynamicFormStyles.dcFlex}>
         <label className={DynamicFormStyles.dcTitle}>
-          {CONSTANTS.VISITED_ON}:
+          {CONSTANTS.TRIP_STARTED}:
         </label>
         <div className={DynamicFormStyles.dcContent}>
           {" "}
-          {props.dataObj.dateVisited}
+          {props.dataObj.tripStarted}
+        </div>
+      </div>
+      <div className={DynamicFormStyles.dcFlex}>
+        <label className={DynamicFormStyles.dcTitle}>
+          {CONSTANTS.TRIP_ENDED}:
+        </label>
+        <div className={DynamicFormStyles.dcContent}>
+          {" "}
+          {props.dataObj.tripEnded}
         </div>
       </div>
 
-      <div className={DynamicFormStyles.dcButton}>
+      <div className={DynamicFormStyles.dcPlaceOpenButton}>
         <Button btnName={props.buttonName} btnLink={props.btnLink} />
       </div>
     </li>
