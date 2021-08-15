@@ -32,10 +32,15 @@
 
 .dcButton {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
 }
 
+.dcPlaceOpenButton {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 .dcFlex {
   display: flex;
   margin: 5px;

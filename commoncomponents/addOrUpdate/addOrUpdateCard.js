@@ -1,10 +1,14 @@
 import Styles from "./addOrUpdateCardsStyles.module.css";
-import AddOrUpdateForm from "./addorUpdateForm";
+import AddOrUpdateForm from "./addorUpdateExpensesForm";
 export default function AddOrUpdateCards(props) {
   return (
     <div className={Styles.popup}>
       <div className={Styles.popupInner}>
-        <AddOrUpdateForm />
+        <AddOrUpdateForm
+          id={props.id}
+          dataHandler={props.dataHandler}
+          updateData={props.updateData}
+        />
       </div>
     </div>
   );

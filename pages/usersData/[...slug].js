@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import DynamicCards from "../../commoncomponents/dynamicCards/dynamicCards";
 import CONSTANTS from "../../utils/constants";
+import tableStyle from "../../commoncomponents/commonComponentStyles/expenseTableStyle.module.css";
+import Button from "../../commoncomponents/button";
 
 export default function TripDetails() {
   const dummyData = [
@@ -20,7 +22,8 @@ export default function TripDetails() {
           _id: "",
           placeId: "Coorg01",
           placeName: "Coorg",
-          visitedOn: "24-01-2021",
+          tripStarted: "24-01-2021",
+          tripEnded: "28-01-2021",
         },
       ],
     },
@@ -58,6 +61,9 @@ export default function TripDetails() {
           placesArray={userDataArray}
           pageName={CONSTANTS.USER_TRIP_EXPENSE}
         />
+        <div className={tableStyle.addNewPlaceBtn}>
+          <Button btnName={CONSTANTS.ADD_NEW_USER_BTN} />
+        </div>
         {/* <div>{dummyData[0].name}</div> */}
       </div>
     </div>

@@ -16,7 +16,7 @@ export default function NavBar() {
 
         <li className={NavBarStyles.navLI}>
           {" "}
-          <Link href="../usersData/expensesTable">Expense Tables</Link>
+          <Link href="../expensesTable">Expense Tables</Link>
         </li>
 
         <li className={NavBarStyles.navLI}>
