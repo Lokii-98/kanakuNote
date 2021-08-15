@@ -89,52 +89,48 @@ export default function UserId() {
   let btnEvents = btnContext.btnEventData;
   useEffect(() => {
     if (btnEvents && btnEvents.clickedBtnName === CONSTANTS.CANCEL_BTN) {
-      console.log("cancel btn clicked");
+      // console.log("cancel btn clicked");
       setOpenAddModel(false);
     }
   }, [btnEvents]);
   const [openAddModel, setOpenAddModel] = useState(false);
   const [userExpenseId, setUserExpenseId] = useState("");
   const [newExpenseData, setNewExpenseData] = useState({});
-
-  let expenseDataArray = getUserExpenseData(
+  let expenseDataArray = [];
+  let creditData = [];
+  let debitData = [];
+  expenseDataArray = getUserExpenseData(
     expenseData,
     palceIdFromUrl,
     userNameFromUrl
   );
-  console.log("Expense DAta Array inside slug", expenseDataArray, "line 84");
-  let creditData = getExpenseData(
-    expenseDataArray,
-    CONSTANTS.EXPENSE_TYPE_CREDIT
-  );
-  let debitData = getExpenseData(
-    expenseDataArray,
-    CONSTANTS.EXPENSE_TYPE_DEBIT
-  );
+  // console.log("Expense DAta Array inside slug", expenseDataArray, "line 84");
+  creditData = getExpenseData(expenseDataArray, CONSTANTS.EXPENSE_TYPE_CREDIT);
+  debitData = getExpenseData(expenseDataArray, CONSTANTS.EXPENSE_TYPE_DEBIT);
   let totalCreditedAmount = getTotalAmount(creditData);
   let totalDebitedAmount = getTotalAmount(debitData);
   let totalBalance = totalCreditedAmount - totalDebitedAmount;
-  console.log(
-    "FileName - ExpenseTableslug",
-    "CreditData -",
-    creditData,
-    "DebitData -",
-    debitData
-  );
+  // console.log(
+  //   "FileName - ExpenseTableslug",
+  //   "CreditData -",
+  //   creditData,
+  //   "DebitData -",
+  //   debitData
+  // );
 
-  console.log("urlData for expense table", urlData);
+  // console.log("urlData for expense table", urlData);
   if (
     openAddModel ||
     (btnEvents &&
       btnEvents.clickedBtnName === CONSTANTS.EDIT_BTN &&
       !(btnEvents && btnEvents.clickedBtnName === CONSTANTS.CANCEL_BTN))
   ) {
-    let dataToCard = { expenses: [{}] };
+    let dataToCard = {};
     if (btnEvents && btnEvents.clickedBtnName === CONSTANTS.EDIT_BTN) {
-      console.log(
-        "Add new expense btn is clicked for one validaition",
-        btnEvents
-      );
+      // console.log(
+      //   "Add new expense btn is clicked for one validaition",
+      //   btnEvents
+      // );
       dataToCard = getDataToBeEdited(btnEvents.editDataId, expenseData);
     }
     return (
@@ -161,11 +157,11 @@ export default function UserId() {
         type: expenseData.type,
       },
     };
-    console.log("New Expense Data ", expenseDataToDb);
+    // console.log("New Expense Data ", expenseDataToDb);
   }
 
   function addNewExpenseHandler(event) {
-    console.log("btn click handler", event.target.id);
+    // console.log("btn click handler", event.target.id);
     setOpenAddModel(true);
     setUserExpenseId(event.target.id);
   }

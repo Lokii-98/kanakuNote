@@ -5,12 +5,12 @@ import CONSTANTS from "../../utils/constants";
 
 export default function DynamicForm(props) {
   let { dataObj } = props;
-  console.log(
-    "dynamicForm and its data",
-    props.dataObj,
-    "Page Name",
-    props.pageName
-  );
+  // console.log(
+  //   "dynamicForm and its data",
+  //   props.dataObj,
+  //   "Page Name",
+  //   props.pageName
+  // );
   let buttonName = "";
   let link = "";
 
@@ -27,7 +27,7 @@ export default function DynamicForm(props) {
   } else if (props.pageName === CONSTANTS.USER_TRIP_EXPENSE) {
     buttonName = `Open ${props.dataObj.userName} Expenses`;
     link = `../expensesTable/personExpensesTable/${props.dataObj.userName}/${props.dataObj.placeId}`;
-    console.log("Trip Expense is true", buttonName, link);
+    // console.log("Trip Expense is true", buttonName, link);
     return (
       <UserTripData
         dataObj={props.dataObj}

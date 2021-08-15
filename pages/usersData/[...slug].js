@@ -32,24 +32,24 @@ export default function TripDetails() {
   const router = useRouter();
 
   const filterData = router.query.slug;
-  console.log("URL path", filterData);
+  // console.log("URL path", filterData);
   if (!filterData) {
     return <p className="center">Loading...</p>;
   }
   const placeName = filterData[0];
   const placeId = filterData[1];
 
-  console.log(
-    "Slug Path",
-    filterData,
-    "PlaceName:",
-    placeName,
-    "placeId: ",
-    placeId
-  );
+  // console.log(
+  //   "Slug Path",
+  //   filterData,
+  //   "PlaceName:",
+  //   placeName,
+  //   "placeId: ",
+  //   placeId
+  // );
 
   let userDataArray = getDataFromArray(dummyData, { placeName, placeId });
-  console.log("UserDataArray after filter", userDataArray);
+  // console.log("UserDataArray after filter", userDataArray);
   return (
     <div>
       <Head>
