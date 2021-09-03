@@ -66,3 +66,11 @@ export const checkIfUserVisitedThisPlace = (dataObj, placeId, placeName) => {
   // );
   return userArray;
 };
+
+export const getUserDataById = (userId, userDataArray) => {
+  let newUserData = userDataArray.filter(
+    (userObj) => userObj.userId === userId
+  );
+  console.log(newUserData, "new user data in common utils");
+  return newUserData;
+};

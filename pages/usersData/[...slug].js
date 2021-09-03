@@ -5,6 +5,9 @@ import DynamicCards from "../../commoncomponents/dynamicCards/dynamicCards";
 import CONSTANTS from "../../utils/constants";
 import tableStyle from "../../commoncomponents/commonComponentStyles/expenseTableStyle.module.css";
 import Button from "../../commoncomponents/button";
+import { useContext, useEffect, useState } from "react";
+import ButtonContext from "../../store/button-context";
+import AddOrUpdateCards from "../../commoncomponents/addOrUpdate/addOrUpdateCard";
 
 export default function TripDetails() {
   const dummyData = [
@@ -32,12 +35,30 @@ export default function TripDetails() {
   const router = useRouter();
 
   const filterData = router.query.slug;
-  // console.log("URL path", filterData);
   if (!filterData) {
     return <p className="center">Loading...</p>;
   }
   const placeName = filterData[0];
   const placeId = filterData[1];
+  console.log("URL path", filterData);
+
+  const [openAddUserModel, setOpenAddUserModel] = useState(false);
+  const btnContxet = useContext(ButtonContext);
+  let btnEvents = btnContxet.btnEventData;
+
+  useEffect(() => {
+    if (btnEvents && btnEvents.clickedBtnName === CONSTANTS.CANCEL_BTN) {
+      // console.log("cancel btn clicked");
+      setOpenAddUserModel(false);
+    }
+  }, [btnEvents]);
+
+  function addNewUserHandler() {
+    setOpenAddUserModel(true);
+  }
+  if (openAddUserModel) {
+    return <AddOrUpdateCards cardName={CONSTANTS.ADD_NEW_USER_BTN} />;
+  }
 
   // console.log(
   //   "Slug Path",
@@ -62,7 +83,10 @@ export default function TripDetails() {
           pageName={CONSTANTS.USER_TRIP_EXPENSE}
         />
         <div className={tableStyle.addNewPlaceBtn}>
-          <Button btnName={CONSTANTS.ADD_NEW_USER_BTN} />
+          <Button
+            btnName={CONSTANTS.ADD_NEW_USER_BTN}
+            onClickHandler={addNewUserHandler}
+          />
         </div>
         {/* <div>{dummyData[0].name}</div> */}
       </div>

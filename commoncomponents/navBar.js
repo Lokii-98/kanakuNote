@@ -11,17 +11,19 @@ export default function NavBar() {
       <ul className={NavBarStyles.navUL}>
         <li className={NavBarStyles.navLI}>
           {" "}
-          <Link href="../usersData/personDetails">Person's List</Link>
+          <Link href="/usersData/personDetails">Person's List</Link>
         </li>
 
         <li className={NavBarStyles.navLI}>
           {" "}
-          <Link href="../expensesTable">Expense Tables</Link>
+          <Link href="/expensesTable">Expense Tables</Link>
         </li>
 
         <li className={NavBarStyles.navLI}>
           {" "}
-          <Link href="/">Login</Link>
+          <Link href="/expensesTable/personExpensesTable/myExpenses">
+            My Expenses
+          </Link>
         </li>
       </ul>
     </header>

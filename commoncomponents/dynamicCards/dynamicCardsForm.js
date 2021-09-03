@@ -37,7 +37,7 @@ export default function DynamicForm(props) {
     );
   } else if (props.pageName === CONSTANTS.INDIVIDUAL_USER_PAGE) {
     buttonName = `Open ${props.dataObj.name} details`;
-    link = `../usersData/personDetails/${props.dataObj.userId}`;
+    link = `/usersData/personDetails/${props.dataObj.userId}`;
     return (
       <UserTripData
         dataObj={props.dataObj}
