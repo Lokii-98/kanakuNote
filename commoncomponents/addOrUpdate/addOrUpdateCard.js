@@ -8,6 +8,7 @@ export default function AddOrUpdateCards(props) {
           id={props.id}
           dataHandler={props.dataHandler}
           updateData={props.updateData}
+          cardName={props.cardName}
         />
       </div>
     </div>

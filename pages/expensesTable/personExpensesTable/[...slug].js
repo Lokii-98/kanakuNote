@@ -125,7 +125,7 @@ export default function UserId() {
       btnEvents.clickedBtnName === CONSTANTS.EDIT_BTN &&
       !(btnEvents && btnEvents.clickedBtnName === CONSTANTS.CANCEL_BTN))
   ) {
-    let dataToCard = {};
+    let dataToCard = "";
     if (btnEvents && btnEvents.clickedBtnName === CONSTANTS.EDIT_BTN) {
       // console.log(
       //   "Add new expense btn is clicked for one validaition",
@@ -138,6 +138,7 @@ export default function UserId() {
         dataHandler={addNewExpenseDataHandler}
         id={userExpenseId}
         updateData={dataToCard}
+        cardName={CONSTANTS.ADD_NEW_EXPENSE_BTN}
       />
     );
   }

@@ -1,18 +1,33 @@
 import Head from "next/head";
-import { useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
 import { getPlacesData } from "../utils/apiUtils/placesApiUtils";
 import DynamicCards from "../commoncomponents/dynamicCards/dynamicCards";
 import CONSTANTS from "../utils/constants";
 import Button from "../commoncomponents/button";
 import tableStyle from "../commoncomponents/commonComponentStyles/expenseTableStyle.module.css";
+import AddOrUpdateCards from "../commoncomponents/addOrUpdate/addOrUpdateCard";
+import ButtonContext from "../store/button-context";
 
 export default function Home(props) {
   let placesFromDb = props.placesFromDb;
-  // useEffect(async () => {
-  //   const dataFromDb = await getPlacesData();
-  //   placesFromDb = dataFromDb;
-  // }, []);
+  const [openAddPlaceModel, setOpenAddPlaceModel] = useState(false);
+  const btnContxet = useContext(ButtonContext);
+  let btnEvents = btnContxet.btnEventData;
+
+  useEffect(() => {
+    if (btnEvents && btnEvents.clickedBtnName === CONSTANTS.CANCEL_BTN) {
+      // console.log("cancel btn clicked");
+      setOpenAddPlaceModel(false);
+    }
+  }, [btnEvents]);
+
+  function addNewPlaceHandler() {
+    setOpenAddPlaceModel(true);
+  }
+  if (openAddPlaceModel) {
+    return <AddOrUpdateCards cardName={CONSTANTS.ADD_NEW_PLACE_BTN} />;
+  }
 
   return (
     <div className={styles.container}>
@@ -26,7 +41,10 @@ export default function Home(props) {
           pageName={CONSTANTS.HOME_PAGE}
         />
         <div className={tableStyle.addNewPlaceBtn}>
-          <Button btnName={CONSTANTS.ADD_NEW_PLACE_BTN} />
+          <Button
+            btnName={CONSTANTS.ADD_NEW_PLACE_BTN}
+            onClickHandler={addNewPlaceHandler}
+          />
         </div>
       </div>
     </div>
